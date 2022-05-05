@@ -1,6 +1,5 @@
 # imports
 import random
-from string import digits
 import time as tm
 
 """
