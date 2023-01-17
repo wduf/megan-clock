@@ -1,3 +1,4 @@
-# python-megan-clock
+# math-clock
 
-my girlfriend, megan, does this thing with clocks where she makes equations out of the time, so i made it in python
+This Python script makes math equations out of your local time.
+- ex: 10:52 => 10 = 5 * 2

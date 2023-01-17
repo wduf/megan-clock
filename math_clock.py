@@ -1,5 +1,4 @@
 # imports
-import random
 import time as tm
 
 """
@@ -10,16 +9,15 @@ import time as tm
 
 """
 
-# functions
 def printTime(hour, min):  # print time
 	print(f"{hour}:", end = "")
-	if(min < 10):
+	if min < 10:
 		print("0", end = "")  # add zero before min for consistent spacing
 	print(min)
 
 
 def getCombos(n):  # return list of strings of all legal number combinations for a hour/min n
-	tens = int(n / 10)  # tens position
+	tens = n // 10  # tens position
 	ones = (n % 10)  # ones position
 	combos = []
 
@@ -62,8 +60,7 @@ def evaluate(left, right):
 	if(empty):
 		print("no combinations possible")
 
-def production():
-	# variables
+def main():
 	time = tm.localtime()
 	hour = (time.tm_hour % 12)  # not military time
 	min = time.tm_min
@@ -74,8 +71,4 @@ def production():
 	printTime(hour, min)
 	evaluate(left, right)
 
-def main():
-	production()
-
-# execute
 main()
